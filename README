@@ -1,0 +1,7 @@
++ (void)sendAsynchronousRequest:(NSURLRequest *)request queue:(NSOperationQueue *)queue completionHandler:(void (^)(NSURLResponse*, NSData*, NSError*))handler
+
+iOS 5 added a new method for sending URL requests using blocks rather than a delegate. Unfortunately it is not 
+compatible with iOS 4. This subclass implements that method in iOS 4, or uses the iOS 5 version if available.
+
+This class uses Automatic Reference Counting (ARC). If your project does not use ARC, you can add the flag 
+-fobjc-arc to BCURLConnection.m under build phases.
